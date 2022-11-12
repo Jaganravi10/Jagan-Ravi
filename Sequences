@@ -1,0 +1,11 @@
+
+public class Sequences {
+
+	public static void main(String[] args) {
+		System.out.println("This will be great");
+		System.out.println("This will be great bcoz of your \"Determination\" and commitment");
+        System.out.println("This is backslash \\");
+        System.out.println("This \n is \n on \n multiple lines");
+	}
+
+}
