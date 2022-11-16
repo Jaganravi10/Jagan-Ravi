@@ -1,0 +1,1082 @@
+Array
+
+package com.java.collection;
+
+public class Array {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int num[] = new int[5];
+		
+		num[0] = 100;
+		num[1] = 200;
+	
+		
+		Object num2[] = new Object[6];
+		
+		num2[0] = 10;
+		num2[1] = "Heloo";
+		num2[2] = 'h';
+		num2[3] = true;
+		num2[4] = 9.6;
+		
+	//	System.out.println(num[5]);
+		
+		for(int j:num)
+		{
+			System.out.println(j);
+		}
+		
+		
+	}
+
+}
+
+ArrayList_ForEach
+
+
+package com.java.collection;
+
+import java.util.ArrayList;
+
+import javax.swing.plaf.synth.SynthSpinnerUI;
+
+public class ArrayList_ForEach {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+ArrayList list1 = new ArrayList<>();
+		
+		list1.add("heloo");
+		list1.add('t');
+		list1.add(true);
+		list1.add(90.0);
+		
+		for(Object i:list1)
+		{
+			System.out.println(i);
+		}
+		
+		
+	}
+
+}
+
+ArrayList_IsEmpty
+
+package com.java.collection;
+
+import java.util.ArrayList;
+
+public class ArrayList_IsEmpty {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+ArrayList list1 = new ArrayList<>();
+		
+	
+		
+		System.out.println(list1.isEmpty());
+		
+		
+		ArrayList list2 = new ArrayList<>();	
+		
+		System.out.println(list2.isEmpty()); // it will return true if list has no value
+		
+		
+		if(list1.isEmpty())
+		{
+			System.out.println("adding value to the list");
+			list1.add("hii");
+			list1.add(167);
+		}
+		
+		else
+		{
+			System.out.println("list is not empty");
+		}
+	}
+
+}
+
+ArrayList_RetriveValue
+
+package com.java.collection;
+
+import java.util.ArrayList;
+
+public class ArrayList_RetrieveValue {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		ArrayList list1 = new ArrayList<>();
+		
+		list1.add("heloo");
+		list1.add('t');
+		list1.add(true);
+		list1.add(90.0);
+
+		
+		System.out.println(list1.get(2));
+		
+		System.out.println(list1.get(4));
+		
+	}
+
+}
+
+ArrayList_Size
+
+package com.java.collection;
+
+import java.util.ArrayList;
+
+public class ArrayList_Size {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+	ArrayList list1 = new ArrayList<>();
+		
+		list1.add("heloo");
+		list1.add('t');
+		list1.add(true);
+		list1.add(90.0);
+		
+		
+		
+		System.out.println(list1.size());
+		
+		int count = list1.size();
+		
+		for(int i=0;i<=count-1;i++)
+		{
+			System.out.println(list1.get(i));
+		}
+		
+		
+		
+		
+	}
+
+}
+
+ArrayList_Test
+
+package com.java.collection;
+
+import java.util.ArrayList;
+
+public class ArrayList_Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		ArrayList<Integer> list = new ArrayList<>();
+		
+	
+		
+		list.add(10);
+		list.add(20);
+		list.add(30);
+		list.add(40);
+		list.add(50);
+		list.add(50);
+		list.add(70);
+		list.add(90);
+		
+		
+		ArrayList list1 = new ArrayList<>();
+		
+		list1.add("heloo");
+		list1.add('t');
+		list1.add(true);
+		list1.add(90.0);
+
+	}
+
+}
+
+ArrayList_AddAll
+
+package com.java.collection;
+
+import java.util.ArrayList;
+
+public class ArrayList_AddAll {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+ArrayList list1 = new ArrayList<>();
+		
+		list1.add("heloo");
+		list1.add('t');
+		list1.add(true);
+		list1.add(90.0);
+		
+		ArrayList list2 = new ArrayList<>();
+		
+		list2.add("Oranium1");
+		list2.add("Oranium2");
+		list2.add("Oranium3");
+		
+		System.out.println(list2.addAll(list1));
+		
+		System.out.println("Values in list2 ="+list2);
+		
+		
+	}
+
+}
+
+ArrayList_Clear
+
+package com.java.collection;
+
+import java.util.ArrayList;
+
+public class ArrayList_Clear {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+ArrayList list1 = new ArrayList<>();
+		
+		list1.add("heloo");
+		list1.add('t');
+		list1.add(true);
+		list1.add(90.0);
+		
+		System.out.println("Before clear="+list1.isEmpty());
+		
+		list1.clear(); // removes all the value from list and make the list empty
+		
+		
+		System.out.println("After clear="+list1.isEmpty());
+
+	}
+
+}
+
+ArrayList_Clone
+
+package com.java.collection;
+
+import java.util.ArrayList;
+
+public class ArrayList_Clone {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+ArrayList list1 = new ArrayList<>();
+		
+		list1.add("heloo");
+		list1.add('t');
+		list1.add(true);
+		list1.add(90.0);
+		
+		ArrayList list2 = (ArrayList) list1.clone();
+		
+	System.out.println("Values of list 1="+list1);
+		
+		System.out.println("Values of list2="+list2);
+		
+		
+		list1.add("new value");
+		list1.add("()");
+		
+
+System.out.println("Values of list 1="+list1);
+		
+		System.out.println("Values of list2="+list2);
+		
+		
+	}
+
+}
+
+ArrayList_Contains
+
+package com.java.collection;
+
+import java.util.ArrayList;
+
+public class ArrayList_Contains {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+ArrayList list1 = new ArrayList<>();
+		
+		list1.add("heloo");
+		list1.add('t');
+		list1.add(true);
+		list1.add(90.0);
+		
+		System.out.println(list1.contains("hiii"));
+		
+		System.out.println(list1.contains(90.0));
+
+		
+		if(list1.contains(90.0))
+		{
+			System.out.println("value is present");
+		}
+		else
+		{
+			System.out.println("value is notpresent");
+		}
+	}
+
+}
+
+ArrayList_Copy
+
+package com.java.collection;
+
+import java.util.ArrayList;
+
+public class ArrayList_Copy {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+ArrayList list1 = new ArrayList<>();
+		
+		list1.add("heloo");
+		list1.add('t');
+		list1.add(true);
+		list1.add(90.0);
+		
+		
+		ArrayList list2 = list1; //copy
+		
+		System.out.println("Values of list 1="+list1);
+		
+		System.out.println("Values of list2="+list2);
+		
+		
+		list1.add("hiii");
+		
+		list1.add("@");
+		
+	System.out.println("Values of list 1="+list1);
+		
+		System.out.println("Values of list2="+list2);
+		
+	}
+
+}
+
+ArryaList_Iterator
+
+package com.java.collection;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class ArrayList_Iterator {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		
+ArrayList list1 = new ArrayList<>();
+		
+		list1.add("heloo");
+		list1.add('t');
+		list1.add(true);
+		list1.add(90.0);
+		
+		Iterator it = list1.iterator();
+		
+		
+		while(it.hasNext())
+		{
+			System.out.println(it.next());
+		}
+		
+	}
+
+}
+
+ArrayList_Remove
+
+package com.java.collection;
+
+import java.util.ArrayList;
+
+public class ArrayList_Remove {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+ArrayList list1 = new ArrayList<>();
+		
+		list1.add("heloo");
+		list1.add('t');
+		list1.add(true);
+		list1.add(90.0);
+		
+		list1.remove(1);
+		
+		System.out.println(list1);
+
+	}
+
+}
+
+HashSet
+
+package com.java.collection;
+
+import java.util.HashSet;
+import java.util.Iterator;
+
+public class HashSet_Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		HashSet set = new HashSet<>();
+		
+		
+		
+		set.add("Red");
+		set.add("Red");
+		set.add("Hii");
+		set.add("heloo");
+		set.add('u');
+		set.add('k');
+		set.add("Red");
+		set.add(56);
+		set.add("heloo");
+		set.add("heloo");
+		set.add('u');
+		set.add('u');
+		set.add(null);
+		
+		Iterator it = set.iterator();
+		while(it.hasNext())
+		{
+			System.out.println(it.next());
+		}
+	}
+
+}
+
+LinkedHashSet
+
+package com.java.collection;
+
+import java.util.Iterator;
+import java.util.LinkedHashSet;
+
+public class LinkedHashSet_Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		LinkedHashSet set = new LinkedHashSet<>();
+		set.add(70);
+		set.add(10);
+		set.add(1000);
+		set.add(50);
+		set.add(9);
+		set.add(43);
+		set.add(6);
+		set.add(72);
+		set.add(70);
+		set.add(70);
+		set.add(1000);
+		set.add(43);
+		set.add(1000);
+		set.add(null);
+		
+		Iterator it = set.iterator();
+		while(it.hasNext())
+		{
+			System.out.println(it.next());
+		}
+
+	}
+
+}
+
+LinkedList
+
+package com.java.collection;
+
+import java.util.Iterator;
+import java.util.LinkedList;
+
+public class LinkedList_Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		LinkedList<Character> list1 = new LinkedList<>();
+		
+		list1.add('y');
+		list1.add('u');
+		list1.add('i');
+		list1.add('y');
+		list1.add('h');
+		list1.add('n');
+		
+		list1.add('y');
+		list1.add('y');
+		list1.add('y');
+		
+		
+		Iterator<Character> it = list1.iterator();
+		
+		while(it.hasNext()) //hasNext - will check whether it has next value or not
+		{
+			System.out.println(it.next()); // Next() - It will return the next value
+		}
+	}
+
+}
+
+TreeSet
+
+package com.java.collection;
+
+import java.util.Iterator;
+import java.util.TreeSet;
+
+public class Tree_Set {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		TreeSet set = new TreeSet<>();
+		
+		set.add(70);
+		set.add(10);
+		set.add(1000);
+		set.add(50);
+		set.add(9);
+		set.add(43);
+		set.add(6);
+		set.add(72);
+		set.add(70);
+		set.add(70);
+		set.add(1000);
+		set.add(43);
+		set.add(1000);
+	//	set.add(null);
+		
+		Iterator it = set.iterator();
+		while(it.hasNext())
+		{
+			System.out.println(it.next());
+		}
+	}
+
+}
+
+HashMap
+
+package com.java.collection;
+
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Set;
+
+public class HashMap_Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		HashMap<Integer, String> map = new HashMap<>();
+		
+		map.put(1006, "xxx");
+		map.put(1002, "yy");
+		map.put(1013, "zz");	
+		map.put(1004, "aa");
+		map.put(1001, "cc");
+		map.put(1005, "bb");
+		map.put(1003, "dd");
+		map.put(1007, "ee");
+	//	map.put(null, "oo");
+		map.put(1002, "uu");
+		map.put(1005, "ii");
+		map.put(1005, "jj");
+		map.put(1009, "kk");
+		
+		System.out.println(map.get(1003));
+		
+		System.out.println(map.get(1013));
+		System.out.println(map.get(1005));
+		
+		
+		HashMap map2 = new HashMap<>();
+		
+		map2.put("Name", "xx");
+		map2.put("age", 18);
+		map2.put("phonenum", 57889);
+		map2.put("pincode", null);
+		map2.put("address", "Velacherry");
+		map2.put(null, "hh");
+		map2.put(null, "gg");
+		
+		System.out.println(map.keySet()); // Retrieve the key from map
+		
+		System.out.println(map.values()); // Retrieve the value from map
+		
+		Set keys =	map2.keySet();
+		
+		Iterator it = keys.iterator();
+		
+		while(it.hasNext())
+		{
+		Object key = 	it.next();
+		System.out.println(key+"--->"+map2.get(key));
+		}
+		
+		
+	Set<Integer> set1 =	map.keySet();
+	
+	Iterator<Integer> it1 = set1.iterator();
+	
+	
+		while(it1.hasNext())
+
+		{
+		int key1 =	it1.next();
+		
+		System.out.println(key1+"="+map.get(key1));
+		}
+	}
+
+}
+
+HashTable
+
+package com.java.collection;
+
+import java.util.Hashtable;
+import java.util.Iterator;
+import java.util.Set;
+
+public class HashTable_Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Hashtable tab = new Hashtable<>();
+		
+		tab.put(1000, "xx");
+		tab.put(1001, "yy");
+		tab.put(1002, "zz");
+		tab.put(1003, "hh");
+		tab.put(1004, "ii");
+		tab.put(1005, "jj");
+		tab.put(1001, null);
+	//	tab.put(null, "ll");
+		
+		System.out.println(tab.keySet());
+		
+		System.out.println(tab.values());
+		
+	Set set = 	tab.keySet();
+	
+	Iterator it = set.iterator();
+	
+	while(it.hasNext())
+	{
+	Object a =	it.next();
+	
+	System.out.println(a+"="+tab.get(a));
+	}
+
+	}
+
+}
+
+LinkedHashMap
+
+package com.java.collection;
+
+import java.util.Iterator;
+import java.util.Set;
+import java.util.TreeMap;
+
+public class LinkedHashMap {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+java.util.LinkedHashMap map = new java.util.LinkedHashMap<>();
+		
+		map.put(1006, "xxx");
+		map.put(1002, "yy");
+		map.put(1013, "zz");	
+		map.put(1004, "aa");
+		map.put(1001, "cc");
+		map.put(1005, "bb");
+		map.put(1003, "dd");
+		map.put(1007, "ee");
+		map.put(null, "oo");
+		map.put(1002, "uu");
+		map.put(1005, "ii");
+		map.put(1005, "jj");
+		map.put(1009, "kk");
+		map.put(1004, null);
+		
+		System.out.println(map.keySet());
+		
+		Set<Integer> set1 =	map.keySet();
+		
+		Iterator<Integer> it1 = set1.iterator();
+		
+		
+			while(it1.hasNext())
+
+			{
+			Object key1 =	it1.next();
+			
+			System.out.println(key1+"="+map.get(key1));
+			}
+	
+		
+	}
+
+}
+
+TreeMap
+
+package com.java.collection;
+
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Set;
+import java.util.TreeMap;
+
+public class TreeMap_Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		TreeMap map2 = new TreeMap<>();
+		
+		map2.put("Name", "xx");
+		map2.put("age", 18);
+		map2.put("phonenum", 57889);
+		map2.put("pincode", null);
+		map2.put("address", "Velacherry");
+	//	map2.put(null, "hh");
+	//	map2.put(null, "gg");
+		
+		
+	Set keys =	map2.keySet();
+		
+		Iterator it = keys.iterator();
+		
+		while(it.hasNext())
+		{
+		Object key = 	it.next();
+		System.out.println(key+"--->"+map2.get(key));
+		}
+		
+		
+		
+TreeMap<Integer, String> map = new TreeMap<>();
+		
+		map.put(1006, "xxx");
+		map.put(1002, "yy");
+		map.put(1013, "zz");	
+		map.put(1004, "aa");
+		map.put(1001, "cc");
+		map.put(1005, "bb");
+		map.put(1003, "dd");
+		map.put(1007, "ee");
+	//	map.put(null, "oo");
+		map.put(1002, "uu");
+		map.put(1005, "ii");
+		map.put(1005, "jj");
+		map.put(1009, "kk");
+		
+		System.out.println(map.keySet());
+		
+		Set<Integer> set1 =	map.keySet();
+		
+		Iterator<Integer> it1 = set1.iterator();
+		
+		
+			while(it1.hasNext())
+
+			{
+			int key1 =	it1.next();
+			
+			System.out.println(key1+"="+map.get(key1));
+			}
+	}
+	
+
+}
+
+CheckedException
+
+package com.java.exception;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+
+public class CheckedException {
+
+	public static void main(String[] args) throws InterruptedException, FileNotFoundException {
+		// TODO Auto-generated method stub
+
+		
+		Thread.sleep(2000);
+		
+		File f = new File("");
+		
+		FileInputStream fis = new FileInputStream(f);
+	}
+
+}
+
+ThrowKeyword
+
+package com.java.exception;
+
+public class ThrowKeyword {
+
+	public static void main(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+		
+		
+		int age = 16;
+		
+		if(age>=18)
+		{
+			System.out.println("eligible to vote");
+		}
+		
+		else
+		{
+			throw new Exception("Age is invalid");
+		}
+
+	}
+
+}
+
+TryCatchFinally
+
+package com.java.exception;
+
+import java.util.ArrayList;
+
+public class Try_Catch_Finally {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		
+		try
+		{
+			ArrayList list = new ArrayList<>();
+			list.add("hii");
+			
+			System.out.println(list.get(0));
+			
+		//	System.out.println(3/6);
+			
+			
+		//	System.out.println("sql disconnected");
+			
+		}
+		
+	
+		
+		catch(ArrayIndexOutOfBoundsException e)
+		{
+			System.out.println("Array Index Out Of Bound Exception");
+		}
+		
+		
+		catch(IndexOutOfBoundsException e)
+		{
+			System.out.println("index Out of bound exception");
+		}
+		
+		catch(ArithmeticException e)
+		{
+			System.out.println("Aritmetic Exception");
+		}
+		
+		catch(Exception e)
+		{
+			System.out.println("General Exception");
+		}
+
+		
+		finally
+		{
+			System.out.println("disconnect sql");
+		}
+	}
+
+}
+
+TryCatch
+
+package com.java.exception;
+
+import java.util.ArrayList;
+
+public class Try_Catch {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		try
+		{
+			ArrayList list = new ArrayList<>();
+			list.add("hii");
+			
+			System.out.println(list.get(1));
+		}
+		
+		catch(Exception e)
+		{
+			System.out.println("Array Index Out Of Bound Exception");
+		}
+	}
+
+}
+
+TryFinally
+
+package com.java.exception;
+
+import java.util.ArrayList;
+
+public class Try_Finally {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		try
+		{
+
+			ArrayList list = new ArrayList<>();
+			list.add("hii");
+			
+			System.out.println(list.get(1));
+		}
+
+		finally
+		{
+			System.out.println("disconnect sql");
+		}
+	}
+
+}
+
+TryMultipleCatch
+
+package com.java.exception;
+
+import java.util.ArrayList;
+
+public class Try_MultipleCatch {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+
+		try
+		{
+			ArrayList list = new ArrayList<>();
+			list.add("hii");
+			
+			System.out.println(list.get(1));
+			
+		//	System.out.println(3/6);
+			
+			
+		//	System.out.println("sql disconnected");
+			
+		}
+		
+	
+		
+		catch(ArrayIndexOutOfBoundsException e)
+		{
+			System.out.println("Array Index Out Of Bound Exception");
+		}
+		
+		
+		catch(IndexOutOfBoundsException e)
+		{
+			System.out.println("index Out of bound exception");
+		}
+		
+		catch(ArithmeticException e)
+		{
+			System.out.println("Aritmetic Exception");
+		}
+		
+		catch(Exception e)
+		{
+			System.out.println("General Exception");
+		}
+
+	}
+
+}
+
+UncheckedException
+
+package com.java.exception;
+
+import java.util.ArrayList;
+
+public class UncheckedException {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+	ArrayList list = new ArrayList<>();
+		list.add("hii");
+		
+		System.out.println(list.get(1));
+		
+		
+		System.out.println(8/0);
+
+	}
+
+}
+
+
+
