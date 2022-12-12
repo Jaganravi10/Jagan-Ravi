@@ -1,4 +1,5 @@
 
+
 public class StringReverseAllWays {
 
 	public static void main(String[] args) {
@@ -20,6 +21,7 @@ public class StringReverseAllWays {
 		reverse=reverse+chararray[i];
 		}
 		System.out.println(reverse);
+
 	}
 
 }
