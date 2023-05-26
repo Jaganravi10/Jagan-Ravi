@@ -1,0 +1,35 @@
+import java.util.HashMap;
+
+public class HashMapExample {
+	
+	public void hashMapExample() {
+		
+		HashMap<Integer, String> animalMap = new HashMap<Integer, String>();
+		animalMap.put(1, "Lion");
+		animalMap.put(2, "Tiger");
+		animalMap.put(3, "Elephant");
+		animalMap.put(4, "Zebra");
+		animalMap.put(5, "Deer");
+		
+		System.out.println(animalMap);
+		
+		HashMap<Integer, String> duplicateAnimalMap = new HashMap<Integer, String>();
+		duplicateAnimalMap.putAll(animalMap);
+		System.out.println(duplicateAnimalMap);
+		
+		System.out.println(animalMap.containsKey(4));
+		System.out.println(animalMap.containsValue("Zebra"));
+		System.out.println(duplicateAnimalMap.clone());
+		System.out.println(animalMap.keySet());
+		System.out.println(duplicateAnimalMap.values());
+		System.out.println(animalMap.entrySet());
+	}
+
+	public static void main(String[] args) {
+
+		HashMapExample example = new HashMapExample();
+		example.hashMapExample();
+
+	}
+
+}
