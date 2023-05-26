@@ -1,0 +1,45 @@
+import java.util.Iterator;
+import java.util.TreeSet;
+
+public class TreeSetExample {
+	
+	public void treeSetExample() {
+		
+		TreeSet<Integer> treeSet = new TreeSet<Integer>();
+		treeSet.add(50);
+		treeSet.add(40);
+		treeSet.add(30);
+		treeSet.add(10);
+		treeSet.add(20);
+		treeSet.add(10);
+		treeSet.add(21);
+			
+		System.out.println(treeSet);
+		System.out.println(treeSet.first());
+		System.out.println(treeSet.last());
+		System.out.println(treeSet.headSet(30));
+		System.out.println(treeSet.tailSet(40));
+		System.out.println(treeSet.subSet(10, 30));
+		System.out.println(treeSet.comparator());
+		System.out.println(treeSet.descendingSet());
+		
+		Iterator<Integer> iterator = treeSet.iterator();
+		while (iterator.hasNext()) {
+			System.out.println(iterator.next());
+		}
+		
+		System.out.println("************");
+		Iterator<Integer> iterator2 = treeSet.descendingIterator();
+		while (iterator2.hasNext()) {
+			System.out.println(iterator2.next());
+		}
+	}
+
+	public static void main(String[] args) {
+
+		TreeSetExample example = new TreeSetExample();
+		example.treeSetExample();
+
+	}
+
+}
