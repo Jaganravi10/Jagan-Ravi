@@ -1,0 +1,24 @@
+import java.util.LinkedHashSet;
+
+public class LinkedHashSetExample {
+	
+	public void linkedHashSetExample() {
+		
+		LinkedHashSet<Object> linkedHashSet = new LinkedHashSet<Object>();
+		linkedHashSet.add("May");
+		linkedHashSet.add(10);
+		linkedHashSet.add(33.33);
+		linkedHashSet.add(true);
+		linkedHashSet.add(10);
+		
+		System.out.println(linkedHashSet);
+	}
+
+	public static void main(String[] args) {
+
+		LinkedHashSetExample example = new LinkedHashSetExample();
+		example.linkedHashSetExample();
+
+	}
+
+}
