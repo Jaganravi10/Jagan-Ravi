@@ -33,8 +33,6 @@ public class IfElseconditionExample {
 //			System.out.println("Neither positive or negative");
 //		}
 		
-		// Nested If Else example
-		
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("User please enter your number");
 		int inputNumber = scanner.nextInt();

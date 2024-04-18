@@ -1,15 +1,22 @@
-package Loops;
+import java.util.Arrays;
 
 public class StringReverse {
 
 	public static void main(String[] args) {
+
+		String given = "Madam";
+		String reverse = "";
 		
-		String given = "All is good and positive";
-		String rev = "";
-		for(int i = given.length()-1;i>=0;i--) {
-			rev = rev+given.charAt(i);
-			
+		for(int i = given.length()-1; i>=0; i--) 
+		{
+			reverse = reverse+given.charAt(i);
 		}
-		System.out.println(rev);
+		System.out.println(reverse);
+		if(given.equalsIgnoreCase(reverse)) {
+			System.out.println("Given strings are palindrome");
+		}else {
+			System.out.println("Given strings are not palindrome");
+		}
 	}
+
 }

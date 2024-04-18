@@ -21,6 +21,7 @@ public class DynamicArrayUsingScanner {
 		System.out.println("Entered values are below");
 		
 		for(int i=0; i<arrary.length; i++) {
+			
 			System.out.println(arrary[i]);
 			
 		}
