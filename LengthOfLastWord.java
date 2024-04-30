@@ -1,3 +1,4 @@
+import java.util.Arrays;
 
 public class LengthOfLastWord {
 	
@@ -13,13 +14,13 @@ public class LengthOfLastWord {
 	public static void lenghtOfLastWordAnotherWay() {
 		
 		int count = 0;
-		String given = "  Everything will be positive  ";
-		given = given.trim();
+		String given = "Everything will be positive";
 		
 		for(int i=given.length()-1;i>=0;i--) {
 			
 			if(given.charAt(i)== ' ') {
 				break;
+				
 			}else {
 				count++;
 		}
@@ -27,9 +28,22 @@ public class LengthOfLastWord {
 		System.out.println(count);
 		
 }
+	
+	public static void printLastWord() {
+		
+		String given = "Java Program Is Easy";
+		String [] arrString = given.split(" ");
+		
+		int i;
+		for (i = 0; i<arrString.length-1; i++ ) {
+	
+		}
+	
+		System.out.println(arrString[i]);
+	}
 	public static void main(String[] args) {
-
-		lenghtOfLastWordAnotherWay();
+		
+		printLastWord();
 
 	}
 
