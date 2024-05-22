@@ -4,115 +4,111 @@ public class Interview_Prep {
 	
 	public static void anagramOrNot() {
 		
-		String given_1 = "Keep";
-		String given_2 = "Peek";
+		String given1 = " Keep ";
+		String given2 = " Peek ";
 		
-		given_1 = given_1.toLowerCase();
-		given_2 = given_2.toLowerCase();
+		given1 = given1.toLowerCase().trim();
+		given2 = given2.toLowerCase().trim();
 		
-		char[] arrGiven1 = given_1.toCharArray();
-		char[] arrGiven2 = given_2.toCharArray();
+		char[] charArray1 = given1.toCharArray();
+		char[] charArray2 = given2.toCharArray();
 		
-		Arrays.sort(arrGiven1);
-		Arrays.sort(arrGiven2);
+		Arrays.sort(charArray1);
+		Arrays.sort(charArray2);
 		
-		boolean result = Arrays.equals(arrGiven1, arrGiven2);
+		boolean result = Arrays.equals(charArray1, charArray2);
 		
-		if (result==true) {
+		if(result == true) {
+			System.out.println("Given strings are anagram");
 			
-			System.out.println("Both strings are anagram");
-		}else {
-			System.out.println("Both strings are not anagram");
+		}else{
+			System.out.println("Given strings are not anagram");
 		}
 
 	}
 
 	public static void reverseString() {
 		
-		String myWord = "Hope";
-		String result = "";
+		String actualWord = "Suprise";
+		String reverseWord = "";
 		
-		for(int i = myWord.length()-1; i>=0;i--) {
-			result = result+myWord.charAt(i);
+		for(int i = actualWord.length()-1;i>=0;i--) {
+			
+			reverseWord = reverseWord+actualWord.charAt(i);
 		}
-		System.out.println(result);
+		
+		System.out.println(reverseWord);
 
 	}
 
 	public static void reverseInteger() {
 		
-		int myNumber = 223344;
-		int temp = 0;
+		long givenNumber = 23234455;
+		long temp = 0;
 		
-		while(myNumber!=0) {
-			temp = temp*10+myNumber%10;
-			myNumber = myNumber/10;
+		while(givenNumber!=0) {
+			temp = temp*10+givenNumber%10;
+			givenNumber = givenNumber/10;
+			
 		}
+		
 		System.out.println(temp);
+		
 	}
 
 	public static void palindromeString() {
 		
-		String providedString = "Level";
-		providedString = providedString.toLowerCase();
-		String tempString = "";
+		String given = "Madam";
+		String expected = "";
 		
-		for(int j=providedString.length()-1;j>=0;j--) {
-			tempString = tempString+providedString.charAt(j);
+		for(int i=given.length()-1;i>=0;i--) {
+			expected = expected+given.charAt(i);
+			
+			}
+			if(given.equalsIgnoreCase(expected)) {
+			System.out.println("Is a palindrom string");
+			}
+			else {
+				System.out.println("Not a palidrome");
+			}
+			
 		}
 		
-		if(providedString.equals(tempString)) {
-			System.out.println("Given string is palindrome");
-		}else {
-			System.out.println("Given string is not a palindrome");
-		}
-
-	}
 
 	public static void palindromeNumber() {
 		
-		int provideNum = 16461;
-		int resultNum = 0;
-		int oriNum = provideNum;
+		int given = 2332;
+		int temp = 0;
 		
-		while(provideNum!=0) {
-			resultNum = resultNum*10+provideNum%10;
-			provideNum = provideNum/10;
-		}
+		while(given!=0) {
+			temp = temp*10+given%10;
+			given = given/10;
+		}	
 		
-		if(oriNum==resultNum) 
-		{
-			System.out.println("Is a palidrome number");
-		}
-		else
-		{
-			System.out.println("Is not a palidrome number");
-		}
-
+		System.out.println(temp);
+	
 	}
 	
 	public static void findOddEvenNumber() {
 		
-		int number = 98;
+		int givenNumber = 7;
 		
-		if(number %2==0) {
-			System.out.println("Is a even number");
+		if(givenNumber%2==0) {
+			System.out.println("Is even number");
 		}else {
-			System.out.println("Is a odd number");
+			System.out.println("Is odd number");
 		}
 
 	}
 
 	public static void findLastWordLength() {
 		
+		String mySentence = "Positive days are coming";
 		int count = 0;
-		String myWord = "My time is coming";
-		
-		for(int h = myWord.length()-1; h>=0; h--) {
-			
-			if(myWord.charAt(h)== ' ') {
-				break;
 				
+		for(int i=mySentence.length()-1;i>=0;i-- ) {
+			if(mySentence.charAt(i)==' ') {
+				break;
 			}else {
 				count++;
 			}
@@ -122,21 +118,59 @@ public class Interview_Prep {
 	
 	public static void reverseSentence() {
 		
-		String givenWord = "I will succeed";
-		String tempWord = "";
+		String givenSentence = "Yes positive days are coming";
+		String temp = "";
+		String [] charSentence = givenSentence.split(" ");
 		
-		String [] resultWord = givenWord.split(" ");
-		
-		for(int k = resultWord.length-1; k>=0; k--) {
-			tempWord = tempWord+resultWord[k]+" ";
+		for(int i=charSentence.length-1;i>=0;i--) {
+			temp = temp+charSentence[i]+" ";
 		}
-		System.out.println(tempWord);
+		System.out.println(temp);
+	} 
+	
+	public static void usingStringBuffer() {
+		
+		String given = "Angel";
+		
+		StringBuffer buffer = new StringBuffer();
+		buffer.append(given);
+		
+		System.out.println(buffer.reverse());
+		
+	}
+	
+	public static void findCharacterOccurance() {
+		
+		String word = "Impossible is nothing";
+		word = word.toLowerCase();
+		char toFind = 'i';
+		int occurance = 0;
+		
+		for(int i=0;i<word.length();i++) {
+			if(word.charAt(i)==toFind) {
+				occurance = occurance+1;
+			}
+		}
+		System.out.println(occurance);
+	}
+			
+	public static void findLastWord() {
+		
+		String givenSentence = "Your time is coming";
+		String[] charTemp = givenSentence.split(" ");
+		int i;
+		
+		for(i=0; i<charTemp.length-1;i++) {
+			
+		}
+		
+		System.out.println(charTemp[i]);
 	}
 	
 		public static void main(String[] args) {
 
-			findLastWordLength();
-
+			findLastWord();
+			
 		}
 
 }
