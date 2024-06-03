@@ -1,4 +1,8 @@
+
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 public class Interview_Prep {
 	
@@ -167,9 +171,60 @@ public class Interview_Prep {
 		System.out.println(charTemp[i]);
 	}
 	
+	public static void findSmallestNumberUsingArrays() {
+		
+		int [] numbers = new int[] {5,4,3,6,7,10,11,15,0};
+		
+		Arrays.sort(numbers);
+		
+		System.out.println(numbers[0]);
+		
+	}
+	
+	public static void findSmallestNumberUsingCollections() {
+		
+		Integer numbers[] = {12,13,14,5,3,6,2};
+		
+		List<Integer> numbersList = Arrays.asList(numbers);
+		Collections.sort(numbersList);
+		Integer smallest = numbersList.get(0);
+		System.out.println(smallest);
+		
+	}
+	
+	public static void findSmallestNumber() {
+		
+		Integer given[] = {12,13,14,5,3,6,2};
+		
+		int smallest = Integer.MAX_VALUE;
+		
+		for(int i = 0; i<given.length;i++) {
+			
+			if(given[i]<smallest) {
+				smallest=given[i];
+			}
+		}
+		
+		 System.out.println(smallest);
+		
+	}
+	
+	public static void findDuplicateValue() {
+		
+		int[] numbers = {22,33,22,14,15,16,17,18,14};
+		
+		for(int i=0;i<numbers.length;i++) {
+			for(int j=i+1;j<numbers.length;j++) {
+				if(numbers[i]==numbers[j]) {
+					System.out.println("Duplicate value is "+ numbers[i]);
+				}
+			}
+		}
+		
+	}
 		public static void main(String[] args) {
 
-			findLastWord();
+			findSmallestNumberUsingCollections();
 			
 		}
 
