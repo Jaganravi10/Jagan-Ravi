@@ -3,6 +3,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.Set;
 
 public class Interview_Prep {
 	
@@ -117,7 +118,7 @@ public class Interview_Prep {
 				count++;
 			}
 		}
-		System.out.println(count);
+		System.out.println("Last word lenght is "+count);
 	}
 	
 	public static void reverseSentence() {
@@ -145,22 +146,22 @@ public class Interview_Prep {
 	
 	public static void findCharacterOccurance() {
 		
-		String word = "Impossible is nothing";
-		word = word.toLowerCase();
-		char toFind = 'i';
+		String givenWord = new String("Eveything will be alright soon don't worry");
+		givenWord=givenWord.toLowerCase();
+		char letterToFind = 'e';
 		int occurance = 0;
 		
-		for(int i=0;i<word.length();i++) {
-			if(word.charAt(i)==toFind) {
-				occurance = occurance+1;
+		for(int i=0;i<givenWord.length();i++) {
+			if(givenWord.charAt(i)==letterToFind) {
+				occurance=occurance+1;
 			}
 		}
-		System.out.println(occurance);
+		System.out.println(letterToFind+" appears "+occurance+" times in the given string");
 	}
 			
 	public static void findLastWord() {
 		
-		String givenSentence = "Your time is coming";
+		String givenSentence = "Your time is coming now";
 		String[] charTemp = givenSentence.split(" ");
 		int i;
 		
@@ -211,7 +212,7 @@ public class Interview_Prep {
 	
 	public static void findDuplicateValue() {
 		
-		int[] numbers = {22,33,22,14,15,16,17,18,14};
+		int[] numbers = {22,33,22,14,15,16,17,18};
 		
 		for(int i=0;i<numbers.length;i++) {
 			for(int j=i+1;j<numbers.length;j++) {
@@ -222,9 +223,44 @@ public class Interview_Prep {
 		}
 		
 	}
+	
+	public static void printNumbersWithOutEnteringNumbers() {
+		
+		int one = 'A'/'A';
+		System.out.println();
+		String dots = "..........";
+		
+		for(int i=one;i<=dots.length()*dots.length();i++) {
+			System.out.println(i);
+		}
+		
+		for(int i=one;i<='d';i+=one) {
+			System.out.println(i);
+		}
+	
+	}
+	
+	public static void findSecondSmallestNumber() {
+		
+		int[] givenArray = {4,10,3,5,6,7,8,1,99,11,2,0};
+		
+		int smallestNumber=Integer.MAX_VALUE;
+		int secondSmallestNumber=Integer.MAX_VALUE;
+		
+		for(int i=0;i<givenArray.length;i++) {
+			if(smallestNumber>givenArray[i]) {
+				secondSmallestNumber=smallestNumber;
+				smallestNumber=givenArray[i];
+			}
+			if(smallestNumber<givenArray[i]&&secondSmallestNumber>givenArray[i]) {
+				secondSmallestNumber=givenArray[i];
+			}
+		}
+		System.out.println(secondSmallestNumber);
+	}
 		public static void main(String[] args) {
 
-			findSmallestNumberUsingCollections();
+			findSecondSmallestNumber();
 			
 		}
 
