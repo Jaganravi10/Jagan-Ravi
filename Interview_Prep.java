@@ -258,9 +258,27 @@ public class Interview_Prep {
 		}
 		System.out.println(secondSmallestNumber);
 	}
+	
+	public static void findLargestNumber() {
+		
+		Integer given[] = {12,13,14,5,3,6,2,99,101,1000};
+		
+		int largest = Integer.MIN_VALUE;
+		
+		for(int i = 0; i<given.length;i++) {
+			
+			if(given[i]>largest) {
+				largest=given[i];
+			}
+		}
+		
+		 System.out.println(largest);
+		
+	}
+	
 		public static void main(String[] args) {
 
-			findSecondSmallestNumber();
+			findLargestNumber();
 			
 		}
 
