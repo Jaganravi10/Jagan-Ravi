@@ -279,14 +279,18 @@ public class Interview_Prep {
 	
 	public static void checkArrayContainsGivenValue() {
 		
-		int[] numbers = {12,3,4,5,6,1,7,8,9};
-		int numberToFind = 55;
+//		int[] numbers = {12,3,4,5,6,1,7,8,9};
+//		int numberToFind = 55;
+//		boolean found = Arrays.stream(numbers).anyMatch(element -> element == numberToFind); //for int values
+
+		String[] programs = {"Java","Python","C++","Ruby"};
+		String toFind = "Java";
 		
-		boolean found = Arrays.stream(numbers).anyMatch(element -> element == numberToFind);
+		boolean found = Arrays.stream(programs).anyMatch(element -> element.equals(toFind)); //for string values
 		if(found) {
-			System.out.println(numberToFind+" is found");
+			System.out.println(toFind+" is found");
 		}else {
-			System.out.println(numberToFind+" is not found");
+			System.out.println(toFind+" is not found");
 		}
 		
 //		boolean result = false;
