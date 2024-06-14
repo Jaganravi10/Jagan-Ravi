@@ -163,6 +163,7 @@ public class Interview_Prep {
 		
 		String givenSentence = "Your time is coming now";
 		String[] charTemp = givenSentence.split(" ");
+		System.out.println(Arrays.toString(charTemp));
 		int i;
 		
 		for(i=0; i<charTemp.length-1;i++) {
@@ -276,9 +277,29 @@ public class Interview_Prep {
 		
 	}
 	
+	public static void checkArrayContainsGivenValue() {
+		
+		int[] numbers = {12,3,4,5,6,1,7,8,9};
+		int numberToFind = 12;
+		
+		boolean result = false;
+		
+		for (int values : numbers) {
+			if(values==numberToFind) {
+				result=true;
+				break;
+			}
+		}
+		if(result) {
+			System.out.println(numberToFind+" is found");
+		}else {
+			System.out.println(numberToFind+" is not found");
+		}
+	}
+	
 		public static void main(String[] args) {
 
-			findLargestNumber();
+			checkArrayContainsGivenValue();
 			
 		}
 
