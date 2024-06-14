@@ -280,21 +280,28 @@ public class Interview_Prep {
 	public static void checkArrayContainsGivenValue() {
 		
 		int[] numbers = {12,3,4,5,6,1,7,8,9};
-		int numberToFind = 12;
+		int numberToFind = 55;
 		
-		boolean result = false;
-		
-		for (int values : numbers) {
-			if(values==numberToFind) {
-				result=true;
-				break;
-			}
-		}
-		if(result) {
+		boolean found = Arrays.stream(numbers).anyMatch(element -> element == numberToFind);
+		if(found) {
 			System.out.println(numberToFind+" is found");
 		}else {
 			System.out.println(numberToFind+" is not found");
 		}
+		
+//		boolean result = false;
+//		
+//		for (int values : numbers) {
+//			if(values==numberToFind) {
+//				result=true;
+//				break;
+//			}
+//		}
+//		if(result) {
+//			System.out.println(numberToFind+" is found");
+//		}else {
+//			System.out.println(numberToFind+" is not found");
+//		}
 	}
 	
 		public static void main(String[] args) {
