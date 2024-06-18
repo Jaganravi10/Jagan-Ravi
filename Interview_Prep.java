@@ -308,9 +308,29 @@ public class Interview_Prep {
 //		}
 	}
 	
+	public static void reverseEachWordInASentence() {
+		
+		String given = "Welcome to my World";
+		String[] charArr = given.split(" ");
+		String temp = "";
+		
+		for(int i=0;i<charArr.length;i++) {
+			String word = charArr[i];
+			String revWord = "";
+			
+			for(int j=word.length()-1;j>=0;j--) {
+				revWord = revWord+word.charAt(j);
+			}
+			temp = temp+revWord+" ";
+		}
+		
+		System.out.println(temp);
+
+	}
+	
 		public static void main(String[] args) {
 
-			checkArrayContainsGivenValue();
+			reverseEachWordInASentence();
 			
 		}
 
