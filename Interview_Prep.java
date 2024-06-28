@@ -1,4 +1,4 @@
-
+ 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -163,7 +163,6 @@ public class Interview_Prep {
 		
 		String givenSentence = "Your time is coming now";
 		String[] charTemp = givenSentence.split(" ");
-		System.out.println(Arrays.toString(charTemp));
 		int i;
 		
 		for(i=0; i<charTemp.length-1;i++) {
@@ -328,9 +327,29 @@ public class Interview_Prep {
 
 	}
 	
+	public static void splitCharacters() {
+		
+		String given = "1223323LIketo343toshd1";
+		char[] charArr = given.toCharArray();
+		String numbers = "";
+		String alphabets = "";
+		
+		for(int i=0;i<charArr.length;i++) {
+			
+			if(Character.isDigit(charArr[i])) {
+				numbers=numbers+charArr[i];
+			}
+			else if(Character.isLetter(charArr[i])){
+				alphabets=alphabets+charArr[i];
+			}
+			}
+		System.out.println(numbers);
+		System.out.println(alphabets);
+	}
+	
 		public static void main(String[] args) {
 
-			reverseEachWordInASentence();
+			splitCharacters();
 			
 		}
 
