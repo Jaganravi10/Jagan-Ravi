@@ -329,22 +329,25 @@ public class Interview_Prep {
 	
 	public static void splitCharacters() {
 		
-		String given = "1223323LIketo343toshd1";
-		char[] charArr = given.toCharArray();
-		String numbers = "";
-		String alphabets = "";
+		String given = "1223323LIketo343toshd1%$^$&$* **&&$(";
+		String digits = "";
+		String letters = "";
+		String specialChars = "";
 		
-		for(int i=0;i<charArr.length;i++) {
-			
+		char[] charArr = given.toCharArray();
+		
+		for(int i=0;i<given.length();i++) {
 			if(Character.isDigit(charArr[i])) {
-				numbers=numbers+charArr[i];
+				digits = digits+charArr[i];
+			}else if(Character.isLetter(charArr[i])) {
+				letters = letters+charArr[i];
+			}else {
+				specialChars = specialChars+charArr[i];
 			}
-			else if(Character.isLetter(charArr[i])){
-				alphabets=alphabets+charArr[i];
-			}
-			}
-		System.out.println(numbers);
-		System.out.println(alphabets);
+		}
+		System.out.println(digits);
+		System.out.println(letters);
+		System.out.println(specialChars);
 	}
 	
 		public static void main(String[] args) {
